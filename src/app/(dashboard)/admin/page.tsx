@@ -1,5 +1,6 @@
 import CountChart from "@/components/CountChart";
 import UserCard from "@/components/UserCard";
+import AttendanceChart from "@/components/AttendanceChart";
 import React from "react";
 
 type Props = {};
@@ -22,7 +23,9 @@ export default function AdminPage({}: Props) {
             <CountChart />
           </div>
           {/* Attendance chart */}
-          <div className="w-full lg:w-2/3 h-[450px]">Attendance</div>
+          <div className="w-full lg:w-2/3 h-[450px]">
+            <AttendanceChart />
+          </div>
         </div>
         {/* Bottom Chart */}
       </div>
