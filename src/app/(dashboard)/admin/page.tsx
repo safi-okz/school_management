@@ -3,6 +3,7 @@ import UserCard from "@/components/UserCard";
 import AttendanceChart from "@/components/AttendanceChart";
 import React from "react";
 import FinanceChart from "@/components/FinanceChart";
+import EventCalendar from "@/components/EventCalendar";
 
 type Props = {};
 
@@ -34,7 +35,9 @@ export default function AdminPage({}: Props) {
         </div>
       </div>
       {/* RIGHT SIDE */}
-      <div className="w-full md:w-1/3">Right</div>
+      <div className="w-full md:w-1/3 flex flex-col gap-8">
+        <EventCalendar />
+      </div>
     </div>
   );
 }
