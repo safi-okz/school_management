@@ -2,6 +2,7 @@ import CountChart from "@/components/CountChart";
 import UserCard from "@/components/UserCard";
 import AttendanceChart from "@/components/AttendanceChart";
 import React from "react";
+import FinanceChart from "@/components/FinanceChart";
 
 type Props = {};
 
@@ -28,7 +29,9 @@ export default function AdminPage({}: Props) {
           </div>
         </div>
         {/* Bottom Chart */}
-        <div className="w-full h-[500px]"></div>
+        <div className="w-full h-[500px]">
+          <FinanceChart />
+        </div>
       </div>
       {/* RIGHT SIDE */}
       <div className="w-full md:w-1/3">Right</div>
