@@ -28,6 +28,7 @@ export default function AdminPage({}: Props) {
           </div>
         </div>
         {/* Bottom Chart */}
+        <div className="w-full h-[500px]"></div>
       </div>
       {/* RIGHT SIDE */}
       <div className="w-full md:w-1/3">Right</div>

@@ -49,7 +49,7 @@ export default function CountChart() {
         <Image src="/moreDark.png" width={20} height={20} alt="More" />
       </div>
       {/* chart */}
-      <div className="w-full h-[75%] relative">
+      <div className="w-full h-[100%] pb-5 relative">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             width={500}
@@ -62,20 +62,42 @@ export default function CountChart() {
               bottom: 5,
             }}
           >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
+            <CartesianGrid
+              strokeDasharray="3 3"
+              vertical={false}
+              stroke="#ddd"
+            />
+            <XAxis
+              dataKey="name"
+              axisLine={false}
+              tick={{ fill: "#d1d5db" }}
+              tickLine={false}
+            />
+            <YAxis
+              axisLine={false}
+              tick={{ fill: "#d1d5db" }}
+              tickLine={false}
+            />
+            <Tooltip
+              contentStyle={{ borderRadius: "10px", borderColor: "lightgray" }}
+            />
+            <Legend
+              align="left"
+              verticalAlign="top"
+              wrapperStyle={{ paddingTop: "20px", paddingBottom: "40px" }}
+              legendType="circle"
+            />
             <Bar
               dataKey="present"
-              fill="#8884d8"
-              activeBar={<Rectangle fill="pink" stroke="blue" />}
+              fill="#C3EBFA"
+              legendType="circle"
+              radius={[10, 10, 0, 0]}
             />
             <Bar
               dataKey="absent"
-              fill="#82ca9d"
-              activeBar={<Rectangle fill="gold" stroke="purple" />}
+              fill="#FAE27C"
+              legendType="circle"
+              radius={[10, 10, 0, 0]}
             />
           </BarChart>
         </ResponsiveContainer>
