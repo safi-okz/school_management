@@ -1,6 +1,39 @@
 import TableSearch from "@/components/TableSearch";
 import React from "react";
 import Image from "next/image";
+import Pagination from "@/components/Pagination";
+import Table from "@/components/Table";
+
+const columns = [
+  {
+    header: "Info",
+    accessor: "info",
+  },
+  {
+    header: "Teacher ID",
+    accessor: "teacherId",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Subjects",
+    accessor: "subjects",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Classes",
+    accessor: "classes",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Phone",
+    accessor: "phone",
+    className: "hidden lg:table-cell",
+  },
+  {
+    header: "Actions",
+    accessor: "actions",
+  },
+];
 
 function TeacherList() {
   return (
@@ -24,9 +57,9 @@ function TeacherList() {
         </div>
       </div>
       {/* top */}
-      <div></div>
-      {/* top */}
-      <div></div>
+      <Table />
+      {/* bottom */}
+      <Pagination />
     </div>
   );
 }
