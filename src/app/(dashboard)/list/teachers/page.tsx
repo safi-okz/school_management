@@ -82,7 +82,7 @@ function TeacherList() {
       <td className="hidden md:table-cell gap-4 p-4">{row.address}</td>
       <td className="gap-4 p-4">
         <div className="flex items-center gap-2">
-          <Link href={`/teachers/${row.id}`}>
+          <Link href={`/list/teachers/${row.id}`}>
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaSky">
               <Image src="/view.png" height={16} width={16} alt="View" />
             </button>
