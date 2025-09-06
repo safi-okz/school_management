@@ -16,7 +16,7 @@ type Subject = {
 
 const columns = [
   {
-    header: "Name",
+    header: "Subject Name",
     accessor: "name",
   },
   {
@@ -36,14 +36,16 @@ function SubjectsList() {
       key={row.id}
       className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lamaPurpleLight"
     >
-      <td className="flex items-center gap-2">
+      <td className="flex items-center gap-4 p-4">
         <div className="flex flex-col">
           <span className="font-semibold">{row.name}</span>
         </div>
       </td>
-      <td className="hidden md:table-cell">{row.teachers.join(", ")}</td>
+      <td className="hidden md:table-cell gap-4 p-4">
+        {row.teachers.join(", ")}
+      </td>
       <td>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4 p-4">
           <Link href={`/teachers/${row.id}`}>
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaSky">
               <Image src="/view.png" height={16} width={16} alt="View" />
@@ -63,7 +65,7 @@ function SubjectsList() {
     <div className="p-4 bg-white rounded-md flex-1 m-4">
       {/* top */}
       <div className="flex justify-between items-center">
-        <h1 className="hidden md:block text-lg font-semibold">All Parents</h1>
+        <h1 className="hidden md:block text-lg font-semibold">All Subjects</h1>
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
           <TableSearch />
           <div className="flex items-center gap-3 self-end">

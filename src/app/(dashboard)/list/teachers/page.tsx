@@ -58,7 +58,7 @@ function TeacherList() {
       key={row.id}
       className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lamaPurpleLight"
     >
-      <td className="flex items-center gap-2">
+      <td className="flex items-center gap-4 p-4">
         <Image
           src={row.photo}
           alt={row.name}
@@ -71,12 +71,16 @@ function TeacherList() {
           <span className="text-xs text-gray-500">{row?.email}</span>
         </div>
       </td>
-      <td className="hidden md:table-cell">{row.teacherId}</td>
-      <td className="hidden md:table-cell">{row.subjects.join(", ")}</td>
-      <td className="hidden md:table-cell">{row.classes.join(", ")}</td>
-      <td className="hidden md:table-cell">{row.phone}</td>
-      <td className="hidden md:table-cell">{row.address}</td>
-      <td>
+      <td className="hidden md:table-cell gap-4 p-4">{row.teacherId}</td>
+      <td className="hidden md:table-cell gap-4 p-4">
+        {row.subjects.join(", ")}
+      </td>
+      <td className="hidden md:table-cell gap-4 p-4">
+        {row.classes.join(", ")}
+      </td>
+      <td className="hidden md:table-cell gap-4 p-4">{row.phone}</td>
+      <td className="hidden md:table-cell gap-4 p-4">{row.address}</td>
+      <td className="gap-4 p-4">
         <div className="flex items-center gap-2">
           <Link href={`/teachers/${row.id}`}>
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaSky">

@@ -49,17 +49,19 @@ function ParentsList() {
       key={row.id}
       className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lamaPurpleLight"
     >
-      <td className="flex items-center gap-2">
+      <td className="flex items-center gap-4 p-4">
         <div className="flex flex-col">
           <span className="font-semibold">{row.name}</span>
           <span className="text-xs text-gray-500">{row?.email}</span>
         </div>
       </td>
-      <td className="hidden md:table-cell">{row.students.join(", ")}</td>
-      <td className="hidden md:table-cell">{row.phone}</td>
-      <td className="hidden md:table-cell">{row.address}</td>
+      <td className="hidden md:table-cell gap-4 p-4">
+        {row.students.join(", ")}
+      </td>
+      <td className="hidden md:table-cell gap-4 p-4">{row.phone}</td>
+      <td className="hidden md:table-cell gap-4 p-4">{row.address}</td>
       <td>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4 p-4">
           <Link href={`/teachers/${row.id}`}>
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaSky">
               <Image src="/view.png" height={16} width={16} alt="View" />
