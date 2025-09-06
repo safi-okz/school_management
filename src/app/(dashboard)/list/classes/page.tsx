@@ -60,12 +60,12 @@ function ClassesList() {
         <div className="flex items-center gap-4 p-4">
           <Link href={`/teachers/${row.id}`}>
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaSky">
-              <Image src="/view.png" height={16} width={16} alt="View" />
+              <Image src="/edit.png" height={16} width={16} alt="Edit" />
             </button>
           </Link>
           {role == "admin" && (
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaPurple">
-              <Image src="/delete.png" height={16} width={16} alt="View" />
+              <Image src="/delete.png" height={16} width={16} alt="Delete" />
             </button>
           )}
         </div>
